@@ -37,7 +37,7 @@ def ReadFile(NamaFile):
         
     idxLine = 0
     while idxLine < len(output) - 1:
-        if (output[idxLine] == '>' and output[idxLine + 1].isalpha() == True):
+        if (output[idxLine] == '>' and output[idxLine + 1]!='<'):
             idxSearch = idxLine
             while idxSearch < len(output):
                 if output[idxSearch] == '<':
@@ -61,7 +61,7 @@ def bacaFileTXT(namafile):
     # ALGORITMA
     currentDir = getCurrentDirectory()
     f = open(os.path.join(currentDir, f"../txt/{namafile}"), 'r')
-    #arraytextfile = f.readlines()
+    # arraytextfile = f.readlines()
     arr = f.readlines()
     f.close()
 
@@ -74,9 +74,9 @@ def splitSyntax(rawSyntax):
     # Membuat List Separator
     listOfSeparators = [
         '\n',
-        '\<',
-        '\>',
-        '\/',
+        r'\<',
+        r'\>',
+        # r'\/',
     ]
 
     for separator in listOfSeparators:
@@ -93,24 +93,24 @@ def splitSyntax(rawSyntax):
     while '\n' in processedSyntax:
         processedSyntax.remove('\n')
 
-    idxFind = 0
-    while idxFind < len(processedSyntax):
-        idxSearch = idxFind + 1
+    # idxFind = 0
+    # while idxFind < len(processedSyntax):
+    #     idxSearch = idxFind + 1
 
-        if processedSyntax[idxFind] == "\"":
-            while idxSearch < len(processedSyntax):
-                if processedSyntax[idxSearch] == "\"":
-                    processedSyntax = processedSyntax[:idxFind] + ["validString"] + processedSyntax[idxSearch + 1:]
-                    break
-                idxSearch += 1
+    #     if processedSyntax[idxFind] == "\"":
+    #         while idxSearch < len(processedSyntax):
+    #             if processedSyntax[idxSearch] == "\"":
+    #                 processedSyntax = processedSyntax[:idxFind] + ["validString"] + processedSyntax[idxSearch + 1:]
+    #                 break
+    #             idxSearch += 1
         
-        if processedSyntax[idxFind] == "\'":
-            while idxSearch < len(processedSyntax):
-                if processedSyntax[idxSearch] == "\'":
-                    processedSyntax = processedSyntax[:idxFind] + ["validString"] + processedSyntax[idxSearch + 1:]
-                    break
-                idxSearch += 1
+    #     if processedSyntax[idxFind] == "\'":
+    #         while idxSearch < len(processedSyntax):
+    #             if processedSyntax[idxSearch] == "\'":
+    #                 processedSyntax = processedSyntax[:idxFind] + ["validString"] + processedSyntax[idxSearch + 1:]
+    #                 break
+    #             idxSearch += 1
         
-        idxFind += 1
+    #     idxFind += 1
 
     return processedSyntax
