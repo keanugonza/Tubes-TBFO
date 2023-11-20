@@ -1,10 +1,6 @@
 from argparse import ArgumentParser
 import sys
 import OpenFile
-# import TXT_to_DICT
-# import FA
-# from CFG_to_CNF import CFGtoCNF
-# from CYK import cyk
 
 if __name__ == "__main__":
     parser = ArgumentParser()

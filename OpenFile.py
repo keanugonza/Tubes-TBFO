@@ -15,6 +15,7 @@ def ReadFile(NamaFile):
     f = open(os.path.join(currentDir, f"{NamaFile}"), 'r')
     arr = f.readlines()
     f.close()
+
     # Menghilangkan Komentar (<!-- comment -->)
     output = ""
     idxLine = 0
@@ -33,8 +34,7 @@ def ReadFile(NamaFile):
                 idxSearch += 1
             output = output[:idxLine] + output[idxSearch + 3:]
         idxLine += 1
-    
-    print(output)
+        
     idxLine = 0
     while idxLine < len(output) - 1:
         if (output[idxLine] == '>' and output[idxLine + 1].isalpha() == True):
@@ -74,6 +74,9 @@ def splitSyntax(rawSyntax):
     # Membuat List Separator
     listOfSeparators = [
         '\n',
+        '\<',
+        '\>',
+        '\/',
     ]
 
     for separator in listOfSeparators:
@@ -111,12 +114,3 @@ def splitSyntax(rawSyntax):
         idxFind += 1
 
     return processedSyntax
-
-
-if __name__ == "__main__":
-    raw = ReadFile("inputAcc.html")
-    processed = splitSyntax(raw)
-
-    for s in processed:
-        if s != '\n':
-            print(s)
