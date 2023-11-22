@@ -36,6 +36,11 @@ BODY L < DIV L
 BODY M < a M
 BODY N < BUTTON N
 BODY O < FORM O
+BODY G < EM G
+BODY H < B H
+BODY I < ABBR I
+BODY J < STRONG J
+BODY K < SMALL K
 BODY a < HTMLF a
 P > F P >F
 P ~ > P >
@@ -210,7 +215,6 @@ H6 i I H6 e
 DIV I L DIV IL
 DIV > I DIV >I
 DIV i I DIV e
-
 P J F P JF
 P > J P >J
 P j J P e
@@ -235,7 +239,6 @@ H6 j J H6 e
 DIV J L DIV JL
 DIV > J DIV >J
 DIV j J DIV e
-
 P K F P KF
 P > K P >K
 P k K P e
@@ -260,7 +263,23 @@ H6 k K H6 e
 DIV K L DIV KL
 DIV > K DIV >K
 DIV k K DIV e
-BODY G < BODY G
-BODY > G BODY >
-BODY g < BODY e
-BODY > G BODY >
+EM > G EM >G
+EM ~ > EM >
+EM < > EM e
+EM g G BODY e
+B > H B >H
+B ~ > B >
+B < > B e
+B h H BODY e
+ABBR > I ABBR >I
+ABBR ~ > ABBR >
+ABBR < > ABBR e
+ABBR i I BODY e
+STRONG > J STRONG >J
+STRONG ~ > STRONG >
+STRONG < > STRONG e
+STRONG j J BODY e
+SMALL > K SMALL >K
+SMALL ~ > SMALL >
+SMALL < > SMALL e
+SMALL k K BODY e
