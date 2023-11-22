@@ -1,4 +1,4 @@
-Q1 Q2
+
 a b
 a b
 Q1
@@ -6,7 +6,7 @@ Z
 F
 E
 Q1 a Z Q1 aZ
-Q1 a a Q1 aa
-Q1 b a Q2 e
-Q2 e a Q1 e
-Q1 e Z F e
+Q1 a a Q2 b
+Q2 c b Q2 bb
+Q2 e b Q2 e
+Q2 e Z F e        

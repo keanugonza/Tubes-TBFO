@@ -11,5 +11,6 @@ if __name__ == "__main__":
 
     arr = OpenFile.ReadFile(fileName)
     arr = OpenFile.splitSyntax(arr)
+    # arr = OpenFile.getGrammar(arr)
 
     print(arr)
