@@ -1,12 +1,99 @@
 
-a b
-a b
-Q1
+A a B b C c d D F f < > ~
+A a B b C c d D F f < > ~ Z
+Q0
 Z
 F
-E
-Q1 a Z Q1 aZ
-Q1 a a Q2 b
-Q2 c b Q2 bb
-Q2 e b Q2 e
-Q2 e Z F e        
+F
+Q0 < Z Q0 <Z
+Q0 A < HTML A
+HTML > A HTML >A
+HTML < > HTML <
+HTML B < HEAD B
+HEAD > B HEAD >B
+HEAD < > HEAD <
+HEAD b < HEAD b
+HEAD > b HEAD >b
+HEAD D < TITLE D
+HEAD C < BODY C
+TITLE > D TITLE >D
+TITLE ~ > TITLE >
+TITLE < > TITLE e
+TITLE d D HEAD e
+BODY > C BODY >C
+BODY < > BODY <
+BODY c < BODY c
+BODY ~ > BODY >
+BODY > c BODY >c
+BODY F < P F
+BODY T < H1 T
+BODY U < H2 U
+BODY V < H3 V
+BODY W < H4 W
+BODY X < H5 X
+BODY Y < H6 Y
+BODY M < a M
+BODY N < BUTTON N
+BODY O < FORM O
+BODY a < HTMLF a
+P > F P >F
+P ~ > P >
+P < > P e
+P f F BODY e
+H1 > T H1 >T
+H1 ~ > H1 >
+H1 < > H1 e
+H1 t T BODY e
+H2 > U H2 >U
+H2 ~ > H2 >
+H2 < > H2 e
+H2 u U BODY e
+H3 > V H3 >V
+H3 ~ > H3 >
+H3 < > H3 e
+H3 v V BODY e
+H4 > W H4 >W
+H4 ~ > H4 >
+H4 < > H4 e
+H4 w W BODY e
+H5 > X H5 >X
+H5 ~ > H5 >
+H5 < > H5 e
+H5 x X BODY e
+H6 > Y H6 >Y
+H6 ~ > H6 >
+H6 < > H6 e
+H6 y Y BODY e
+a > M a >M
+a ~ > a >
+a < > a e
+a 3 M a 3M
+a = 3 a =
+a " = a "
+a * " a "
+a " " a e
+a m M BODY e
+BUTTON > N BUTTON >N
+BUTTON ~ > BUTTON >
+BUTTON < > BUTTON e
+BUTTON 0 N TYPE 0N
+BUTTON n N BODY e
+TYPE = 0 TYPE =
+TYPE " = TYPE "
+TYPE ` " TYPE "
+TYPE " " BUTTON e
+FORM > O FORM >O
+FORM ~ > FORM >
+FORM < > FORM e
+FORM @ O FORM @O
+FORM = @ FORM =
+FORM " = FORM "
+FORM * " FORM "
+FORM " " FORM e
+FORM # O METHOD #O
+FORM o O BODY e
+METHOD = # METHOD =
+METHOD " = METHOD "
+METHOD + " METHOD "
+METHOD " " FORM e
+HTMLF > a F e 

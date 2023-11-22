@@ -227,9 +227,9 @@ def getGrammar(processedSyntax):
             grammar += "`"
         elif i == "reset" :
             grammar += "`"
-        elif i == "get" :
+        elif i == "GET" :
             grammar += "+"
-        elif i == "post" :
+        elif i == "POST" :
             grammar += "+"
         elif i == "text" :
             grammar += ";"
