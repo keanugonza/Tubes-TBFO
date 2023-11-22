@@ -9,7 +9,9 @@ if __name__ == "__main__":
     else :
         fileName = "inputAcc.html"
 
-    arr = OpenFile.ReadFile(fileName)
-    arr = OpenFile.splitSyntax(arr)
+    arr = OpenFile.ReadRawFile(fileName)
+    arr = OpenFile.splitFile(arr)
+    arr = OpenFile.handleString(arr)
+    arr = OpenFile.handleComment(arr)
 
     print(arr)
