@@ -74,10 +74,6 @@ def handleComment(arr):
                 i += 1
     return arr
 
-# def handleTag(arr):
-#         for i in range (len(arr)):
-#             if arr[i] == '<' 
-
 def getGrammar(processedSyntax):
     grammar = ""
     for i in processedSyntax :
