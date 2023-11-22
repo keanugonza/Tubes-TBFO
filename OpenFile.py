@@ -223,4 +223,24 @@ def getGrammar(processedSyntax):
             grammar += "/"
         elif i == "string" :
             grammar += "~"
+        elif i == "submit" :
+            grammar += "`"
+        elif i == "reset" :
+            grammar += "`"
+        elif i == "get" :
+            grammar += "+"
+        elif i == "post" :
+            grammar += "+"
+        elif i == "text" :
+            grammar += ";"
+        elif i == "password" :
+            grammar += ";"
+        elif i == "email" :
+            grammar += ";"
+        elif i == "number" :
+            grammar += ";"
+        elif i == "checkbox" :
+            grammar += ";"
+        else:
+            grammar += "*"
     return grammar
