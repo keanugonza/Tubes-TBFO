@@ -33,7 +33,7 @@ def splitFile(rawFile):
         r'\<',
         r'\>',
         r'\!',
-        r'\-',
+        '--',
         r'\=',
         r'\"',
     ]
@@ -64,13 +64,13 @@ def handleString(arr):
     return arr
 
 def handleComment(arr):
-    for i in range (len(arr)-3):
-        if arr[i] == '<' and arr[i+1] == '!' and arr[i+2] == '-' and arr[i+3] == '-':
-            while i+4 < len(arr) and not(arr[i+4] == '-'):
-                if (arr[i+4] == '<'):
+    for i in range (len(arr)-2):
+        if arr[i] == '<' and arr[i+1] == '!' and arr[i+2] == '--':
+            while i+3 < len(arr) and not(arr[i+3] == '--'):
+                if (arr[i+3] == '<'):
                     break
-                arr.pop(i+4)
-                arr.insert(i+4, 'komen')
+                arr.pop(i+3)
+                arr.insert(i+3, 'komen')
                 i += 1
     return arr
 
@@ -217,7 +217,7 @@ def getGrammar(processedSyntax):
             grammar += ">"
         elif i == "!" :
             grammar += "!"
-        elif i == "-" :
+        elif i == "--" :
             grammar += "-"
         elif i == "coment" :
             grammar += "/"
