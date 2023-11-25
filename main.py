@@ -13,6 +13,8 @@ if __name__ == "__main__":
     arr = OpenFile.splitFile(arr)
     arr = OpenFile.handleString(arr)
     arr = OpenFile.handleComment(arr)
+    arr = OpenFile.handlePetik(arr)
     arr = OpenFile.getGrammar(arr)
+
 
     print(arr)

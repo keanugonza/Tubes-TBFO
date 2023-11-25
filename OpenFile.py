@@ -63,6 +63,17 @@ def handleString(arr):
                 i += 1
     return arr
 
+def handlePetik(arr):
+    i = 0
+    while i <= (len(arr)-1):
+        if arr[i] == '"' and arr[i+1] != '"' and arr[i-1] !='"':
+            if ((arr[i+1] != 'GET') and (arr[i+1] != 'POST') and (arr[i+1] != 'submit') and (arr[i+1] != 'reset') and (arr[i+1] != 'button') and (arr[i+1] != 'text') and (arr[i+1] != 'password') and (arr[i+1] != 'email') and (arr[i+1] != 'number') and (arr[i+1] != 'checkbox')):
+                arr.pop(i+1)
+                arr.insert(i+1, 'petik')
+            i += 3
+        i+=1
+    return arr
+
 def handleComment(arr):
     for i in range (len(arr)-2):
         if arr[i] == '<' and arr[i+1] == '!' and arr[i+2] == '--':
@@ -241,6 +252,8 @@ def getGrammar(processedSyntax):
             grammar += ";"
         elif i == "checkbox" :
             grammar += ";"
-        else:
+        elif i == "petik":
             grammar += "*"
+        else:
+            grammar += "."
     return grammar
