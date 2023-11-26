@@ -139,40 +139,4 @@ def check(state, input, stack) :
 		return 0
 
 
-<<<<<<< Updated upstream
-# checks if symbol is terminal or non-terminal
-def done():
-	if found:
-		print ("Hurray! Input word \"" + start_input + "\" is part of grammar." )
-	else:
-		print ("Sorry! Input word \"" + start_input + "\" is not part of grammar." )
-
-
-
-# UI
-# here it should read automata in from file
-filename = "pda.txt"
-while not parse_file(filename):
-	print ("File not found!")
-	filename = input("Please enter your automata file again:\n")
-print ("Automata built.")
-
-start_input = input("Please enter your word:\n")
-print ("Checking word \"" + start_input + "\" ...")
-
-
-found = False
-# magic starts here
-if not generate(start_symbol, start_input, start_stack, [(start_symbol, start_input, start_stack)]):
-	done()
-else:
-	print_config(accepted_config) # show list of configurations to acceptance
-	done()
-
-# start_input = input("Enter your next word (or n):\n")
-print ("Checking word \"" + start_input + "\" ...")
-
-	
-=======
 		
->>>>>>> Stashed changes
