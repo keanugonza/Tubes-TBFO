@@ -81,7 +81,7 @@ def handleComment(arr):
                 if (arr[i+3] == '<'):
                     break
                 arr.pop(i+3)
-                arr.insert(i+3, 'komen')
+                arr.insert(i+3, 'coment')
                 i += 1
     return arr
 

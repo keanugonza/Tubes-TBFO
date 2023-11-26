@@ -202,16 +202,16 @@ print ("Automata built.")
 start_input = input("Please enter your word:\n")
 print ("Checking word \"" + start_input + "\" ...")
 
-while start_input != "n":
-	found = False
-	# magic starts here
-	if not generate(start_symbol, start_input, start_stack, [(start_symbol, start_input, start_stack)]):
-		done()
-	else:
-		print_config(accepted_config) # show list of configurations to acceptance
-		done()
 
-	start_input = input("Enter your next word (or n):\n")
-	print ("Checking word \"" + start_input + "\" ...")
+found = False
+# magic starts here
+if not generate(start_symbol, start_input, start_stack, [(start_symbol, start_input, start_stack)]):
+	done()
+else:
+	print_config(accepted_config) # show list of configurations to acceptance
+	done()
+
+# start_input = input("Enter your next word (or n):\n")
+print ("Checking word \"" + start_input + "\" ...")
 
 	
