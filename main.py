@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 import sys
 import OpenFile
-import pda
+import OpenPDA
 
 if __name__ == "__main__":
     parser = ArgumentParser()
@@ -13,5 +13,5 @@ if __name__ == "__main__":
     arr = OpenFile.handleComment(arr)
     arr = OpenFile.handlePetik(arr)
     arr = OpenFile.getGrammar(arr)
-    pda.start(filePDA)
-    pda.process(arr)
+    OpenPDA.start(filePDA)
+    OpenPDA.process(arr)
