@@ -15,7 +15,7 @@ Pada tugas besar ini kami diminta untuk mengimplementasikan PDA yang telah diaja
 
 ## How To Use
 > 1. Masukkan file .html yang akan dicek ke dalam folder TESTFILE<br>
-> 2. Run program pada terminal dengan command // python main.py pda.txt "{nama file}"
+> 2. Run program pada terminal dengan command // python main.py PDA.txt "{nama file}"
 > 3. Pastikan nama file yang dimasukkan pada terminal benar
 > 4. Akan keluar apakah file .html tersebut valid (Accepted) atau tidak valid (Syntax error)
 
