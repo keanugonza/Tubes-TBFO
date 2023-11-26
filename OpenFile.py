@@ -2,16 +2,15 @@ import os
 import re
 
 
-def getCurrentDirectory():
+def getDirectory():
     # Mengembalikan directory saat ini
     return os.path.dirname(os.path.realpath(__file__))
 
 
-def ReadRawFile(NamaFile):
-
+def readFile(NamaFile):
     # Membaca File
-    currentDir = getCurrentDirectory()
-    f = open(os.path.join(currentDir, f"{NamaFile}"), 'r')
+    currentDir = getDirectory()
+    f = open(os.path.join(currentDir, f"TESTFILE", f"{NamaFile}"), 'r')
     arr = f.readlines()
     f.close()
 
@@ -38,6 +37,7 @@ def splitFile(rawFile):
         r'\"',
     ]
 
+    # Memisahkan string berdasarkan List Separator
     for separator in listOfSeparators:
         tempSyntax = []
 
@@ -55,6 +55,7 @@ def splitFile(rawFile):
     return processedSyntax
 
 def handleString(arr):
+    # Menghandle string yang bisa menimbulkan error
     for i in range (len(arr)-1):
         if arr[i] == '>' and arr[i+1] != '<':
             while i+1 < len(arr) and arr[i+1] != '<':
@@ -64,6 +65,10 @@ def handleString(arr):
     return arr
 
 def handlePetik(arr):
+<<<<<<< Updated upstream
+=======
+    # Menghandle petik dan elemen didalamnya yang harus sesuai dengan spesifikasi
+>>>>>>> Stashed changes
     i = 0
     while i <= (len(arr)-1):
         if arr[i] == '"' and arr[i+1] != '"' and arr[i-1] !='"':
@@ -77,6 +82,10 @@ def handlePetik(arr):
     return arr
 
 def handleComment(arr):
+<<<<<<< Updated upstream
+=======
+    # Menghandle comment yang bisa menimbulkan error
+>>>>>>> Stashed changes
     for i in range (len(arr)-2):
         if arr[i] == '<' and arr[i+1] == '!' and arr[i+2] == '--':
             while i+3 < len(arr) and not(arr[i+3] == '--'):
@@ -88,6 +97,7 @@ def handleComment(arr):
     return arr
 
 def getGrammar(processedSyntax):
+    # Membuat grammar dari arr string yang telah diproses sebelumnya menjadi simbol simbol
     grammar = ""
     for i in processedSyntax :
         if i == "html" :
@@ -258,4 +268,8 @@ def getGrammar(processedSyntax):
             grammar += "*"
         else:
             grammar += "."
+<<<<<<< Updated upstream
     return grammar
+=======
+    return grammar
+>>>>>>> Stashed changes
