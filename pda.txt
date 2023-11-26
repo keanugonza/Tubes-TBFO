@@ -203,20 +203,12 @@ FORM L O DIV LO
 DIV > O FORM >O
 FORM L O DIV LO
 DIV > O FORM >O
-<<<<<<< Updated upstream
-=======
-FORM 9 O INPUT 9O
-INPUT < O FORM O
->>>>>>> Stashed changes
 FORM N O BUTTON NO
 BUTTON > O FORM >O
 FORM ( O SCRIPT (O
 SCRIPT > O FORM >O
-<<<<<<< Updated upstream
 FORM 9 O INPUT 9O
 INPUT < O FORM O
-=======
->>>>>>> Stashed changes
 FORM 7 O IMG 7O
 IMG < O FORM O
 FORM 1 O LINK 1O
